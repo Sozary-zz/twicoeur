@@ -1,0 +1,12 @@
+Prise en main:
+1. Nom personnalisé: Twicoeur
+2. HelloWorld fonctionnel (https://pedago02a.univ-avignon.fr/~uapv1602171/squelette/twicoeur.php?action=helloWorld)
+3. superTest fonctionnel (https://pedago02a.univ-avignon.fr/~uapv1602171/squelette/twicoeur.php?action=superTest&param1=param1&param2=param2)
+
+Login
+1. $this->link = new PDO('pgsql:host='.HOST.';dbname='.DB, USER, PASS);
+2. formulaire créé
+3. getUserByLoginAndPass utilisé
+   message géré
+   en cas de succés, utilisateur enregistré
+   helloWorld accessible qu en mode connecté

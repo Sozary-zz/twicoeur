@@ -1,0 +1,148 @@
+.preview ul {
+  list-style: none;
+}
+
+.form-group.avatar {
+  height: 400px;
+}
+
+.preview {
+  position: relative;
+  width: 250px;
+  margin: 0 auto 0 auto;
+}
+
+.custom-file ul {
+  height: 0px;
+}
+
+.browse-pics>.avatar-item.selected {
+  border: 1px solid rgba(0, 132, 180, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.browse-pics>.avatar-item {
+  display: inline-block;
+  width: 120px;
+  height: 90px;
+  padding: 4px;
+  margin: 2% 1% 2% 1%;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #e6ecf0;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all .1s linear;
+}
+
+.browse-pics>.avatar-item:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.browse-pics>.avatar-item>.avatar-itme-name, .browse-pics>.avatar-item>.avatar-item-pic {
+  text-align: center;
+}
+
+.browse-pics>.avatar-item>.avatar-item-pic {
+  height: 70%;
+}
+
+.browse {
+  opacity: 0;
+  overflow: hidden;
+}
+
+.preview img {
+  animation-name: rubberBand;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+}
+
+.custom-file ul {
+  list-style: none;
+}
+
+.custom-file ul li {
+  display: block;
+}
+
+.browse.active {
+  overflow: scroll;
+  animation: browseAnim 1s linear 0.5s 1 normal forwards;
+}
+
+.preview.active {
+  animation: previewAnim 1s linear 0.5s 1 normal forwards;
+}
+
+.preview.reverse {
+  position: relative;
+  display: block;
+  animation-name: previewReverseAnim;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes previewReverseAnim {
+  0% {
+    top: -230px;
+    left: 35%;
+  }
+  50% {
+    top: -100px;
+    left: 5%;
+  }
+  100% {
+    top: 0px;
+    left: 0%;
+  }
+}
+
+@keyframes previewAnim {
+  0% {
+    top: 0px;
+    left: 0%;
+  }
+  100% {
+    top: -30px;
+    left: 35%;
+  }
+}
+
+@keyframes browseAnim {
+  0% {
+    float: left;
+    background-color: white;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    float: left;
+    background-color: whitesmoke;
+    width: 700px;
+    height: 200px;
+    opacity: 1;
+    border-radius: 0 4px 4px 4px;
+    border: 1px solid #ddd;
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  60% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
